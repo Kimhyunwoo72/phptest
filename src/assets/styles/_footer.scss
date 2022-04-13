@@ -1,0 +1,106 @@
+#footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: var(--white);
+    border-top: 1px solid var(--dark_border);
+    background-color:  var(--dark_bg);
+    display: flex;
+    align-items: center;
+    font-family: "Rajdhani";
+    div {
+        text-align: center;
+        padding: 1.45rem;
+    }
+    h4,
+    ul {
+        display: inline-block;
+    }
+    h4 {
+        font-weight: 600;
+        font-size: 20px;
+        padding: 0 0.6em;
+        text-transform: capitalize;
+
+    }
+    a {
+        display: inline-block;
+        &:hover:after{
+            width: 100%;
+            background: var(--white);
+        }
+    }
+    a:after {
+        content: '';
+        display: block;
+        margin: auto;
+        height: 2px;
+        width: 0px;
+        background: transparent;
+        transition: width .5s ease, background-color .5s ease;
+    }
+
+    div:nth-child(1) {
+        flex: 1 1 25%;
+        border-right: 1px solid var(--dark_border);
+    }
+    div:nth-child(2) {
+        flex: 1 1 20%;
+        border-right: 1px solid var(--dark_border);
+    }
+    div:nth-child(3) {
+        flex: 1 1 55%;
+        li {
+            display: inline;
+            a {
+                display: inline-block;
+                padding: 0 0.6em;
+            }
+            a:after {
+                content: '';
+                display: block;
+                margin: auto;
+                height: 2px;
+                width: 0px;
+                background: transparent;
+                transition: width .5s ease, background-color .5s ease;
+            }
+            a {
+                &:hover:after{
+                    width: 100%;
+                    background: var(--white);
+                }
+            }
+        }
+    }
+}
+
+//라이트 버전
+#footer.light {
+    background-color: var(--light_bg);
+    border-color: 1px solid var(--light_border);
+    
+    h4 {
+        color: var(--black);
+    }
+    a {
+        color: var(--black);
+
+        &:hover:after{
+            width: 100%;
+            background: var(--black);
+        }
+    }
+    div {
+        border-right-color: var(--light_border);
+
+        li {
+            a {
+                &:hover:after{
+                    background: var(--black);
+                }
+            }
+        }
+    }
+}
