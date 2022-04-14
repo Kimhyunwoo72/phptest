@@ -104,3 +104,16 @@
         }
     }
 }
+
+@media (max-width:1020px) {
+    #footer {
+        div:nth-child(1) {
+            display: none;
+        h4 {
+            display: none;
+        }
+    }
+        div:nth-child(2) {display: none;}
+        div:nth-child(3) {display: none;}
+    }
+}

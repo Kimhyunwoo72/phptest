@@ -2,22 +2,21 @@ import React from "react";
 import Header from "../includes/Header";
 import Contents from "../includes/Contents";
 import Footer from "../includes/Footer";
+import ContTitle from "../includes/ContTitle";
+import ContContact from "../includes/ContContact";
+import AboutCont from "../includes/AboutCont";
 
 function About() {
     return (
         <>
-        <Header />
+        <Header color = "light" />
         <Contents>
-            <section className="about__cont">
-                <div className="about__inner">
-                    <div>about</div>
-                </div>
-            </section>
+        <ContTitle title = {["ABOUT", "ME", "light"]}/>
+        <AboutCont color = "light" />
+        <ContContact />
         </Contents>
-        <Footer />
     </>
     )
-    
 }
 
 export default About;
