@@ -1,21 +1,20 @@
 import React from "react";
-import Header from "../includes/Header";
-import Contents from "../includes/Contents";
-import Footer from "../includes/Footer";
+import Header from "../layout/Header";
+import Contents from "../layout/Contents";
+import ContTitle from "../layout/ContTitle";
+import ContContact from "../layout/ContContact";
+import Footer from "../layout/Footer";
+import ContactCont from "../includes/ContactCont";
 
 function Contact() {
     return (
         <>
-        <Header />
-        <Contents>
-            <section className="contact__cont">
-                <div className="contact__inner">
-                    <div>Contact</div>
-                </div>
-            </section>
-        </Contents>
-        <Footer />
-    </>
+            <Header />
+            <Contents>
+                <ContactCont />
+            </Contents>
+            <Footer />
+        </>
     )
     
 }

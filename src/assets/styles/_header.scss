@@ -73,7 +73,7 @@
 //라이트 버전
 #header.light {
     background-color: var(--light_bg);
-    border-color: 1px solid var(--light_border);
+    border-bottom: 1px solid var(--light_border);
     
     a {
         color: var(--black);

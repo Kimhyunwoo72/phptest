@@ -1,10 +1,10 @@
 import React from "react";
-import Header from "../includes/Header";
-import Contents from "../includes/Contents";
-import Footer from "../includes/Footer";
+import Header from "../layout/Header";
+import Contents from "../layout/Contents";
+import Footer from "../layout/Footer";
 import PortCont from "../includes/PortCont";
-import ContTitle from "../includes/ContTitle";
-import ContContact from "../includes/ContContact";
+import ContTitle from "../layout/ContTitle";
+import ContContact from "../layout/ContContact";
 
 function Portfolio() {
     return (

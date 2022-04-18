@@ -89,3 +89,12 @@
         color: var(--black);
     }
 }
+
+// refer
+.refer__cont.light {
+    background-color: var(--light_bg);
+    border-color: 1px solid var(--light_border);
+    h2,th,td{
+        color: var(--black);
+    }
+}

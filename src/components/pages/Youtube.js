@@ -1,23 +1,25 @@
+
 import React from "react";
-import Header from "../includes/Header";
-import Contents from "../includes/Contents";
-import Footer from "../includes/Footer";
+import Header from "../layout/Header";
+import Contents from "../layout/Contents";
+import ContTitle from "../layout/ContTitle";
+import ContContact from "../layout/ContContact";
+import YoutubeCon from "../includes/YoutubeCon";
+import Footer from "../layout/Footer";
+
 
 function Youtube() {
     return (
         <>
-        <Header />
-        <Contents>
-            <section className="youtube__cont">
-                <div className="youtube__inner">
-                    <div>Youtube</div>
-                </div>
-            </section>
-        </Contents>
-        <Footer />
-    </>
+            <Header />
+            <Contents>
+                <ContTitle title = {["CODING", "YOUTUBER"]}/>
+                <YoutubeCon />
+                <ContContact />
+                <Footer />
+            </Contents>
+        </>
     )
-    
 }
 
 export default Youtube;
