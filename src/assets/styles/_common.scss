@@ -24,6 +24,27 @@
         display: block;
     }
 }
+
+// 타이틀 애니메이션
+.cont__title {
+    strong {
+        display: block;
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    em {
+        display: block;
+        opacity: 0;
+        transform: translateY(100px);
+    }
+}
+.port_inner {
+    display: block;
+    opacity: 0;
+    transition: all 1s;
+    // transform: translateY(200px);
+}
+
 @media (max-width:600px) {
     .cont__title {
         text-align: center;
@@ -98,3 +119,4 @@
         color: var(--black);
     }
 }
+

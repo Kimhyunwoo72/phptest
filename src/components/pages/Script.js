@@ -9,14 +9,14 @@ import Footer from "../layout/Footer";
 function Script() {
     return (
         <>
-        <Header />
+        <Header color = "light" />
         <Contents>
-            <ContTitle title = {["SCRIPT", "JAVASCRIPT"]}/>
-            <ScriptCon />
-            <ContContact />
+            <ContTitle title = {["SCRIPT", "JAVASCRIPT", "light"]}/>
+            <ScriptCon color = "light" />
+            <ContContact  />
             <Footer color = "light" />
         </Contents>
-        <Footer />
+        <Footer color = "light" />
     </>
     )
     

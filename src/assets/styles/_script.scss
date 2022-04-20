@@ -35,3 +35,16 @@
     
     }
 }
+
+//script 
+.script__cont {
+    background-color: var(--light_bg);
+    border-color: 1px solid var(--light_border);
+    h4,p,span {
+        color: var(--black);
+    }
+}
+.script__inner article span {
+    color: var(--black);
+    border-color: 1px solid var(--light_border);
+}

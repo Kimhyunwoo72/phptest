@@ -2,16 +2,15 @@
     color: #fff;
     font-family: var(--main_font);
     text-transform: uppercase;
-    height: 110vh;
+    height: 100vh;
 }
 .contact__inner {
     padding-top: 20vh;
     line-height: 1;
     padding-left: 15vw;
     padding-right: 15vw;
-    padding-bottom: 200px;
     .text {
-        font-size: 9vw;
+        font-size: 8vw;
         white-space: nowrap;
         div:nth-child(2) {
             padding-left: 10vw;
@@ -23,7 +22,7 @@
     .desc {
         color: #898989;
         width: 23vw;
-        padding: 4vw 0;
+        padding: 4vw 0 0 0;
         font-size: 1em;
         float: right;
         line-height: 1.6;
@@ -36,9 +35,6 @@
             width: 40vw;
         }
     }
-    .contact__cont {
-        height: 70vh;
-    }
 }
 @media (max-width:450px) {
     .contact__inner {
@@ -49,6 +45,8 @@
         }
         .desc {
             font-size: 10px;
+            width: 100%;
+            text-align: center;
         }
     }
 

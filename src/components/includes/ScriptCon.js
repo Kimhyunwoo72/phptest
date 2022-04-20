@@ -1,8 +1,8 @@
 import React from 'react'
 
-function ScriptCon() {
+function ScriptCon(props) {
   return (
-    <section className="script__cont">
+    <section className={`script__cont ${props.color}`}>
         <div className="container">
             <div className="script__inner">
                 <article>
