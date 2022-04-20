@@ -15,7 +15,7 @@
           "view": "밑줄과 파란색으로 표시",
           "use": "★★★★★",
           "image": "https://i1.daumcdn.net/thumb/T650x650/?fname=https://blog.kakaocdn.net/dn/KWSlV/btq4MTbqRrV/r2vIqzLlKBOtVKsBX8sga0/img.png",
-          "link": "https://webzz.tistory.com/229",
+          "link": "https://go-goa.tistory.com/88?category=998653",
           "Definition": [
             "<a> 태그는 클릭하면 다른 페이지로 이동합니다. 현재 페이지에서 다른 페이지 URL로 연결하는 것을 하이퍼링크라고 합니다.",
             "<a> 태그는 페이지 주소 뿐만 아니라, 메일 주소, 전화 번호 등도 연결할 수 있습니다.",
@@ -172,30 +172,6 @@
             
           ],
           "mdn": "https://developer.mozilla.org/ko/docs/Web/HTML/Element/area",
-          "w3c": ""
-        },
-        {
-          "id": 7,
-          "title": "",
-          "desc": "",
-          "desc2": "",
-          "element": "",
-          "tag": "",
-          "version": "",
-          "view": "",
-          "use": "",
-          "image": "",
-          "link": "",
-          "Definition": [
-            
-          ],
-          "Accessibility": [
-            
-          ],
-          "CrossBroswing": [
-            
-          ],
-          "mdn": "",
           "w3c": ""
         }
       ]
