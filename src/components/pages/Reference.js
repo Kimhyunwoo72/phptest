@@ -27,7 +27,7 @@ import axios from "axios";
 class Reference extends React.Component {
     state = {
         isLoading: true,
-        ports: []
+        refers: []
     }
     mainAnimation =()=>{
         setTimeout(() => {
@@ -69,11 +69,12 @@ class Reference extends React.Component {
 
 
     //async & axios는 다 다운받고 실행해라라는 명령어
-    getPorts = async ()=>{
+    getSite = async ()=>{
         //{ data : { data: {ports}}} 은 경로의 파일만 가져오게 설정하는 것.
-        const { data : { data: {ports}}} = await axios.get("https://webstoryboy.github.io/dothome1/portfolio.json") 
-
-        this.setState({ports : ports}) //위 가져온 데이터를 ports에 저장
+        // const { data : { data: {refers}}} = await axios.get("https://kimhyunwoo72.github.io/react2022/src/assets/json/referencs.json") 
+        const refer = await axios.get("https://kimhyunwoo72.github.io/react2022/src/assets/json/referencs.json") 
+        console.log(refer)
+        // this.setState({refers : refers}) //위 가져온 데이터를 ports에 저장
 
         //데이터 불러오는지 확인
         // console.log(ports)
@@ -89,8 +90,8 @@ class Reference extends React.Component {
         setTimeout(() => {
             console.log("첫번째 시작")
             document.getElementById("loading").classList.remove("loading__active")
-            document.querySelector("body").style.background = "#fff"
-            this.getPorts()
+            document.querySelector("body").style.background = "#f0eeeb"
+            this.getSite()
         }, 2000);
     }
 
