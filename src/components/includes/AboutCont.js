@@ -41,27 +41,29 @@ function AboutCont(props) {
     //   />
     // ))}
     <section className={`about__cont ${props.color}`}>
-    <div className="container">
-       <article className="about__item about__item1">
-           <img src={aboutText[0].image} alt="이미지" />
-           <h4>{aboutText[0].title}</h4>
-           <p>{aboutText[0].desc}</p>
-       </article>
-       <article className="about__item about__item2">
-           <img src={aboutText[1].image} alt="이미지" />
-           <div>
-                <h4>{aboutText[1].title}</h4>
-                <p>{aboutText[1].desc}</p>
-           </div>
-       </article>
-       <article className="about__item about__item3">
-           <div>
-                <h4>{aboutText[2].title}</h4>
-                <p>{aboutText[2].desc}</p>
-           </div>
-           <img src={aboutText[2].image} alt="이미지" />
-       </article>
-    </div>
+      <div className="container">
+        <div className="about__inner">
+          <article className="about__item about__item1">
+              <img src={aboutText[0].image} alt="이미지" />
+              <h4>{aboutText[0].title}</h4>
+              <p>{aboutText[0].desc}</p>
+          </article>
+          <article className="about__item about__item2">
+              <img src={aboutText[1].image} alt="이미지" />
+              <div>
+                    <h4>{aboutText[1].title}</h4>
+                    <p>{aboutText[1].desc}</p>
+              </div>
+          </article>
+          <article className="about__item about__item3">
+              <div>
+                    <h4>{aboutText[2].title}</h4>
+                    <p>{aboutText[2].desc}</p>
+              </div>
+              <img src={aboutText[2].image} alt="이미지" />
+          </article>
+        </div>
+      </div>
 </section>
   )
 }

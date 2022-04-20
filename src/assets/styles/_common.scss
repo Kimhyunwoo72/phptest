@@ -38,12 +38,7 @@
         transform: translateY(100px);
     }
 }
-.port_inner {
-    display: block;
-    opacity: 0;
-    transition: all 1s;
-    // transform: translateY(200px);
-}
+
 
 @media (max-width:600px) {
     .cont__title {

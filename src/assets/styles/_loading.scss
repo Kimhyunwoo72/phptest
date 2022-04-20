@@ -68,6 +68,13 @@ body {
       }
     }
 }
+//라이트 버전
+#loading.light {
+    background-color: var(--light_bg);
+    .loading__text span{
+        color: var(--black);
+    }
+}
 
 @keyframes blur-text {
     0% {

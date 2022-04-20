@@ -28,6 +28,18 @@
         line-height: 1.6;
     }
 }
+// 애니메이션
+.contact__inner  .text > div {
+    opacity: 0;
+    transition: all 0.5s;
+    // transform: translateY(200px);
+}
+.desc {
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+
 @media (max-width:1000px) {
     .contact__inner {
         padding-top: 20vh;

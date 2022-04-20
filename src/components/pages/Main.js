@@ -82,6 +82,7 @@ class Main extends React.Component {
         setTimeout(() => {
             document.getElementById("loading").classList.remove("loading__active")
             // this.setState({isLoading:false})
+            document.querySelector("body").style.background = "#000"
             this.getMain()
         }, 2000);
     }

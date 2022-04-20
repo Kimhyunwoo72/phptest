@@ -36,6 +36,14 @@
     }
 }
 
+// 애니메이션
+.script__inner {
+    display: block;
+    opacity: 0;
+    transition: all 1s;
+    // transform: translateY(200px);
+}
+
 //script 
 .script__cont {
     background-color: var(--light_bg);
