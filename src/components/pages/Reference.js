@@ -29,6 +29,7 @@ class Reference extends React.Component {
         isLoading: true,
         refers: []
     }
+
     mainAnimation =()=>{
         setTimeout(() => {
             // .main__inner > div:nth-child(1)
@@ -70,17 +71,16 @@ class Reference extends React.Component {
 
     //async & axios는 다 다운받고 실행해라라는 명령어
     getSite = async ()=>{
-        //{ data : { data: {ports}}} 은 경로의 파일만 가져오게 설정하는 것.
+        //{ data : { data: {htmlRefer}}} 은 경로의 파일만 가져오게 설정하는 것.
         const {
              data : {
                   data: {htmlRefer},
                 },
             } = await axios.get("https://kimhyunwoo72.github.io/react2022/src/assets/json/referencs.json") 
-                // console.log(first)
                 this.setState({refers: htmlRefer, isLoading: false})
                 console.log("두번째 시작")
                 this.mainAnimation()
-            }
+    }
 
     componentDidMount(){
         setTimeout(() => {
@@ -91,7 +91,7 @@ class Reference extends React.Component {
         }, 2000);
     }
 
-    render(){
+    render() {
         const {isLoading, refers} = this.state;
         console.log(refers)
         

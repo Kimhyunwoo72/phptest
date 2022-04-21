@@ -27,7 +27,6 @@ import axios from "axios";
 class About extends React.Component {
     state = {
         isLoading: true,
-        ports: []
     }
     mainAnimation =()=>{
         setTimeout(() => {

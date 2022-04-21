@@ -2,7 +2,7 @@ import React from 'react'
 import {Link} from "react-router-dom";
 
 function ReferInfo({id, desc, title}){
-  return(
+  return (
       <tr>
         <td>{id}</td>
         <td>{title}</td>
