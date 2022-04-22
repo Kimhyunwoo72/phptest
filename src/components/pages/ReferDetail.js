@@ -25,10 +25,19 @@ class ReferDetail extends React.Component {
             gsap.to("#header", {
                 duration: 0.4,
                 top: 0,
+                delay: 1,
+                ease: "power4.out"
             });
             gsap.to("#footer", {
                 duration: 0.4,
                 bottom: 0,
+                delay: 1.2,
+                ease: "power4.out"
+            })
+            gsap.to(".refer__inner", {
+                duration:0.5, 
+                opacity: 1,
+                delay: 1.6, 
             })
         }, 10)
     }

@@ -48,8 +48,6 @@ class Reference extends React.Component {
             })
             gsap.to(".refer__inner", {
                 duration:0.5, 
-                x:0,
-                y:0,
                 opacity: 1,
                 delay: 1.6,
             })
