@@ -3,7 +3,14 @@ import Header from "../layout/Header";
 import Contents from "../layout/Contents";
 import Footer from "../layout/Footer";
 import { gsap } from "gsap";
+import { Link } from 'react-router-dom';
 
+
+// function ReferenceInfo(props){
+//     return(
+//         <li key = {props.id}>{props.definition}</li>
+//     )
+// }
 
 class ReferDetail extends React.Component {
     componentDidMount(){
@@ -84,10 +91,12 @@ class ReferDetail extends React.Component {
                                         <li>
                                             <h4>정의 (Definition)</h4>
                                             <ul>
-                                                function Definition() {
-                                                    
-                                                }
-                                                <p><li>{location.state.Definition}</li></p>
+                                                <p>
+                                                {location.state.Definition.map((refer) => (
+                                                    <li key={refer}>{refer}</li>
+                                                ))}
+                                                </p>
+                                                {/* <p><li>{location.state.Definition}</li></p> */}
                                             </ul>
                                         </li>
                                         <li>
