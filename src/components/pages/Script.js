@@ -29,7 +29,7 @@ class Script extends React.Component {
         isLoading: true,
         ports: []
     }
-    mainAnimation =()=>{
+    scriptAnimation =()=>{
         setTimeout(() => {
             // .main__inner > div:nth-child(1)
             gsap.to("#header", {
@@ -69,19 +69,19 @@ class Script extends React.Component {
 
 
     //async & axios는 다 다운받고 실행해라라는 명령어
-    getPorts = async ()=>{
+    getScript = async ()=>{
         //{ data : { data: {ports}}} 은 경로의 파일만 가져오게 설정하는 것.
-        const { data : { data: {ports}}} = await axios.get("https://webstoryboy.github.io/dothome1/portfolio.json") 
+        const lists = await axios.get("https://api.themoviedb.org/3/search/movie?api_key=6c3fec69f8d9c81f8c2c82b8b4d4da4c&query=Avengers") 
 
-        this.setState({ports : ports}) //위 가져온 데이터를 ports에 저장
-
+        this.setState({lists, isLoading: false}) //위 가져온 데이터를 ports에 저장
+console.log(lists)
         //데이터 불러오는지 확인
         // console.log(ports)
 
         setTimeout(() => {
             console.log("두번째 시작")
             this.setState({isLoading: false})
-            this.mainAnimation()
+            this.scriptAnimation()
         }, 1600);
     }
 
@@ -90,13 +90,12 @@ class Script extends React.Component {
             console.log("첫번째 시작")
             document.getElementById("loading").classList.remove("loading__active")
             document.querySelector("body").style.background = "#F0EEEB"
-            this.getPorts()
+            this.getScript()
         }, 2000);
     }
 
     render(){
-        const {isLoading, ports} = this.state;
-        console.log(ports)
+        const {isLoading, lists} = this.state;
         
         return (
             <>
@@ -107,7 +106,7 @@ class Script extends React.Component {
                         <Header color = "light" />
                         <Contents>
                             <ContTitle title = {["SCRIPT", "JAVASCRIPT", "light"]}/>
-                            <ScriptCon color = "light" />
+                            <ScriptCon color = "light" lists={lists} />
                             <ContContact  />
                             <Footer color = "light" />
                         </Contents>

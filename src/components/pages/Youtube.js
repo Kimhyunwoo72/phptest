@@ -4,7 +4,9 @@ import Header from "../layout/Header";
 import Contents from "../layout/Contents";
 import ContTitle from "../layout/ContTitle";
 import ContContact from "../layout/ContContact";
-import YoutubeCon from "../includes/YoutubeCon";
+// import YotubeSearch from "../includes/YotubeSearch";
+import YoutubeCont from "../includes/YoutubeCont";
+import YotubeList from "../includes/YotubeList";
 import Footer from "../layout/Footer";
 import { gsap } from "gsap";
 import Loading from "../basics/Loading";
@@ -25,13 +27,13 @@ import axios from "axios";
 //     )
 // }
 
-
 class Youtube extends React.Component {
     state = {
         isLoading: true,
-        ports: []
+        lists: [],
+        searchs: []
     }
-    mainAnimation =()=>{
+    YoutubeAnimation =()=>{
         setTimeout(() => {
             // .main__inner > div:nth-child(1)
             gsap.to("#header", {
@@ -59,8 +61,8 @@ class Youtube extends React.Component {
                 delay: 1.3,
                 ease: "power4.out"
             })
-            gsap.to(".script__inner", {
-                duration:0.5, 
+            gsap.to(".yotube_list", {
+                duration:2, 
                 x:0,
                 y:0,
                 opacity: 1,
@@ -71,11 +73,12 @@ class Youtube extends React.Component {
 
 
     //async & axios는 다 다운받고 실행해라라는 명령어
-    getPorts = async ()=>{
+    getYoutubes = async ()=>{
         //{ data : { data: {ports}}} 은 경로의 파일만 가져오게 설정하는 것.
-        const { data : { data: {ports}}} = await axios.get("https://webstoryboy.github.io/dothome1/portfolio.json") 
-
-        this.setState({ports : ports}) //위 가져온 데이터를 ports에 저장
+        // const { data : { data: {ports}}} = await axios.get("https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=30&q=J.Fla&key=AIzaSyB82t9gGUp5oopFwlU4aCwPjnqYjdmj52A") 
+        const lists = await axios.get("https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=27&type=video&q=J.Fla&key=AIzaSyB82t9gGUp5oopFwlU4aCwPjnqYjdmj52A") 
+        console.log(lists)
+        this.setState({lists, isLoading: false}) //위 가져온 데이터를 ports에 저장
 
         //데이터 불러오는지 확인
         // console.log(ports)
@@ -83,22 +86,20 @@ class Youtube extends React.Component {
         setTimeout(() => {
             console.log("두번째 시작")
             this.setState({isLoading: false})
-            this.mainAnimation()
+            this.YoutubeAnimation()
         }, 1600);
     }
 
     componentDidMount(){
         setTimeout(() => {
-            console.log("첫번째 시작")
             document.getElementById("loading").classList.remove("loading__active")
             document.querySelector("body").style.background = "#000"
-            this.getPorts()
+            this.getYoutubes()
         }, 2000);
     }
 
     render(){
-        const {isLoading, ports} = this.state;
-        console.log(ports)
+        const {isLoading, lists} = this.state;
         
         return (
             <>
@@ -108,8 +109,10 @@ class Youtube extends React.Component {
                     <>
                         <Header />
                         <Contents>
-                            <ContTitle title = {["CODING", "YOUTUBER"]} />
-                            <YoutubeCon />
+                            <ContTitle title = {["YOUTUBER", "REFERENCE"]} />
+                            {/* <YotubeList lists={lists} /> */}
+                            {/* <YotubeSearch /> */}
+                            <YoutubeCont lists={lists} />
                             <ContContact />
                             <Footer />
                         </Contents>

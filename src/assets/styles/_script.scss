@@ -36,6 +36,39 @@
     }
 }
 
+
+
+.script__inner {
+    opacity: 0;
+}
+.script__inner .container h3 {
+    color: var(--white);
+    font-size: 40px;
+    margin: 0 2%;
+}
+.script__inner .container ul{
+    width: 100%;
+    display: flex;
+    // flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+}
+.script__inner .container ul li {
+    // margin: 40px 40px 40px 0px;
+    color: var(--white);
+    flex: 2 1 25%;
+    margin: 2%;
+}
+.script__inner .container ul li img {
+    width: 100%;
+    height: 23vw;
+}
+.script__inner .container ul li p {
+    padding: 5px 0;
+    font-size: 1.2vw;
+}
+
 // 애니메이션
 .script__inner {
     display: block;
