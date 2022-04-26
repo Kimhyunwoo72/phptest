@@ -1,5 +1,5 @@
 .yotube_list {
-    opacity: 0;
+    // opacity: 0;
 }
 .yotube_list .container h3 {
     color: var(--white);
@@ -12,7 +12,6 @@
     // flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
-
 }
 .yotube_list .container ul li {
     // width: 30%;
@@ -21,13 +20,66 @@
     color: var(--white);
     flex: 2 1 25%;
     margin: 2%;
-    
 }
 .yotube_list .container ul li p {
     padding: 5px 0;
     font-size: 1.2vw;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; 
+    -webkit-box-orient: vertical;
 }
-// img{
-//     width: 100%;
-//     height: 100%;
-// }
+
+.youtube__search {
+    position: relative;
+    h2 {
+        color: var(--white);
+        font-size: 40px;
+        font-family: var(--subKor_font);
+        text-indent: -9999px;
+        width: 0;
+        height: 0;
+    }
+    input {
+        border: 1px solid var(--light_border);
+        width: 98%;
+        background: var(--black);
+        border-radius: 50px;
+        padding: 1rem 3rem 1rem 2rem;
+        color: var(--light_bg);
+        font-family: var(--subKor_font);
+        margin: 0 1%;
+        margin-bottom: 3%;
+    }
+    button {
+        position: absolute;
+        right: 20px;
+        top: 8px;
+        background: transparent;
+        background: #fff;
+        border: 0;
+        color: var(--black);
+        font-family: var(--subKor_font);
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        font-size: 12px;
+        transition: opacity 0.3s ease;
+        &:active {
+            opacity: 0.7;
+        }
+    }
+}
+@media (max-width:800px) {
+    .yotube_list ul li {
+        flex: 1 1 43% !important;
+    }
+}
+
+// 애니메이션
+.yotube_list,
+.youtube__search {
+    opacity: 0;
+    transform: translateY(100px);
+}

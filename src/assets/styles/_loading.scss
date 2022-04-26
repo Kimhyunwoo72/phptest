@@ -4,6 +4,7 @@ body {
 #loading.loading__active {
     opacity: 1;
     transition: all 1.6s;
+    z-index: 99999;
 }
 #loading {
     opacity: 0;
@@ -15,6 +16,7 @@ body {
     background: var(--black);
     z-index: 9999;
     transition: all 1.6s;
+    z-index: -1;
 }
 .loading__text {
     position: absolute;
