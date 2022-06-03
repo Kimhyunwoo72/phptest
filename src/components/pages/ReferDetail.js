@@ -3,14 +3,10 @@ import Header from "../layout/Header";
 import Contents from "../layout/Contents";
 import Footer from "../layout/Footer";
 import { gsap } from "gsap";
-import { Link } from 'react-router-dom';
 
-
-// function ReferenceInfo(props){
-//     return(
-//         <li key = {props.id}>{props.definition}</li>
-//     )
-// }
+function scroll() {
+    window.scrollTo(0,0)
+}
 
 class ReferDetail extends React.Component {
     componentDidMount(){
@@ -22,6 +18,8 @@ class ReferDetail extends React.Component {
     }
     mainAnimation = () => {
         setTimeout(() => {
+            scroll()
+            
             gsap.to("#header", {
                 duration: 0.4,
                 top: 0,
@@ -41,16 +39,8 @@ class ReferDetail extends React.Component {
             })
         }, 10)
     }
-    // Definition = ({location, definition}) => {
-    //     return (
-    //         <li>
-    //         {location.state.map(der => (
-    //             <Definition der = {location.state.definition}></Definition>
-    //         ))}
-    //         </li>
-    //     )
-    // }
     render(){
+        
         const {location} = this.props;
         console.log(location.state);
         if(location.state === undefined){
@@ -125,6 +115,7 @@ class ReferDetail extends React.Component {
                         </div>
                     </section>
                     </Contents>
+
                     <Footer/>
                 </>
             )

@@ -1,163 +1,158 @@
 .script__cont {
-    font-family: var(--Chosunilbo);
-    
+  font-family: var(--Chosunilbo);
 }
 .script__inner {
-    
-    article {
-        .active {
-            border-style: dashed;
-        }
-        span {
-            display: inline-block;
-            color: #fff;
-            width: 50px;
-            height: 50px;
-            border: 1px solid #fff;
-            border-radius: 50%;
-            text-align: center;
-            line-height: 3;
-            margin: 30px 7px;
-        }
-        .text {
-            color: #fff;
-            h4 {
-                font-size: 1.5vw;
-                padding-bottom: 1vw;
-            }
-            p {
-                display: inline;
-                width: 47%;
-            }
-            .desc {
-                display: flex;
-                justify-content: space-between;
-            }
-        }
-    
+  article {
+    .active {
+      border-style: dashed;
     }
+    span {
+      display: inline-block;
+      color: #fff;
+      width: 50px;
+      height: 50px;
+      border: 1px solid #fff;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 3;
+      margin: 30px 7px;
+    }
+    .text {
+      color: #fff;
+      h4 {
+        font-size: 1.5vw;
+        padding-bottom: 1vw;
+      }
+      p {
+        display: inline;
+        width: 47%;
+      }
+      .desc {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+  }
 }
 
 .script__inner {
-    opacity: 0;
-    
+  opacity: 0;
 }
 .script__inner .container h3 {
-    color: var(--white);
-    font-size: 40px;
-    margin: 0 2%;
+  color: var(--white);
+  font-size: 40px;
+  margin: 0 2%;
 }
-.script__inner .container ul{
-    width: 100%;
-    display: flex;
-    // flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-
+.script__inner .container ul {
+  width: 100%;
+  display: flex;
+  // flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 .script__inner .container ul li {
-    // margin: 40px 40px 40px 0px;
-    color: var(--white);
-    flex: 2 1 25%;
-    margin: 2%;
+  // margin: 40px 40px 40px 0px;
+  color: var(--white);
+  flex: 2 1 25%;
+  margin: 2%;
 }
 .script__inner .container ul li img {
-    width: 100%;
-    height: 23vw;
+  width: 100%;
+  height: 23vw;
 }
 .script__inner .container ul li p {
-    padding: 5px 0;
-    font-size: 1.2vw;
+  padding: 5px 0;
+  font-size: 1.2vw;
 }
 
 // 애니메이션
 .script__inner {
-    display: block;
-    opacity: 0;
-    transition: all 1s;
-    // transform: translateY(200px);
+  display: block;
+  opacity: 0;
+  transition: all 1s;
+  // transform: translateY(200px);
 }
 .script_list,
 .script__search {
-    opacity: 0;
-    transform: translateY(100px);
+  opacity: 0;
+  transform: translateY(100px);
 }
 
 .bg {
-    width: 100%;
-    background-color: var(--light_bg);
+  width: 100%;
 }
-//script 
+//script
 .script__cont {
-    background-color: var(--light_bg);
-    border-color: 1px solid var(--light_border);
-    h4,p,span {
-        color: var(--black);
-    }
+  border-color: 1px solid var(--light_border);
+  h4,
+  p,
+  span {
+    color: var(--white);
+  }
 }
 .script__inner article span {
-    color: var(--black);
-    border-color: 1px solid var(--light_border);
+  color: var(--black);
+  border-color: 1px solid var(--light_border);
 }
 .script__search.light {
-    background-color: var(--light_bg);
-    border-color: 1px solid var(--light_border);
+  background-color: var(--light_bg);
+  border-color: 1px solid var(--light_border);
+  color: var(--black);
+
+  input {
     color: var(--black);
-    
-    input {
-        color: var(--black);
-        background-color: var(--light_bg) !important;
-        border-color: 1px solid var(--light_border);
-    }
-    button {
-        background: #000;
-        color: var(--white);
-        font-family: var(--subKor_font);
-    }
+    background-color: var(--light_bg) !important;
+    border-color: 1px solid var(--light_border);
+  }
+  button {
+    background: #000;
+    color: var(--white);
+    font-family: var(--subKor_font);
+  }
 }
 .script__search {
-    position: relative;
+  position: relative;
 
-    h2 {
-        color: var(--white);
-        font-size: 40px;
-        font-family: var(--subKor_font);
-        text-indent: -9999px;
-        width: 0;
-        height: 0;
+  h2 {
+    color: var(--white);
+    font-size: 40px;
+    font-family: var(--subKor_font);
+    text-indent: -9999px;
+    width: 0;
+    height: 0;
+  }
+  input {
+    border: 1px solid var(--light_border);
+    width: 98%;
+    background: var(--black);
+    border-radius: 50px;
+    padding: 1rem 3rem 1rem 2rem;
+    color: var(--light_bg);
+    font-family: var(--subKor_font);
+    margin: 0 1%;
+    margin-bottom: 3%;
+  }
+  button {
+    position: absolute;
+    right: 20px;
+    top: 8px;
+    background: transparent;
+    background: #fff;
+    border: 0;
+    color: var(--black);
+    font-family: var(--subKor_font);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 12px;
+    transition: opacity 0.3s ease;
+    &:active {
+      opacity: 0.7;
     }
-    input {
-        border: 1px solid var(--light_border);
-        width: 98%;
-        background: var(--black);
-        border-radius: 50px;
-        padding: 1rem 3rem 1rem 2rem;
-        color: var(--light_bg);
-        font-family: var(--subKor_font);
-        margin: 0 1%;
-        margin-bottom: 3%;
-    }
-    button {
-        position: absolute;
-        right: 20px;
-        top: 8px;
-        background: transparent;
-        background: #fff;
-        border: 0;
-        color: var(--black);
-        font-family: var(--subKor_font);
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        font-size: 12px;
-        transition: opacity 0.3s ease;
-        &:active {
-            opacity: 0.7;
-        }
-    }
+  }
 }
-@media (max-width:800px) {
-    .script_list ul li {
-        flex: 1 1 43% !important;
-    }
+@media (max-width: 800px) {
+  .script_list ul li {
+    flex: 1 1 43% !important;
+  }
 }

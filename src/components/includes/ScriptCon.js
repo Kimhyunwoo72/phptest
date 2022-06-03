@@ -1,25 +1,25 @@
-import React from 'react'
+import React from "react";
 import ScriptList from "../includes/ScriptList";
 
 function ScriptCon(props) {
-    // console.log("script",props)
+  // console.log("script",props)
   return (
-    <section className={`script__cont ${props.color}`}>
-        <div className="container">
-            <div className="script__inner">
-              <div className='script_list'>
-                <div className="container">
-                    <ul>
-                        {props.videos.map((video, index) => (
-                        <ScriptList  key = {index} video={video}  />
-                        ))}
-                    </ul>
-                  </div>
-              </div>
+    <section className="script__cont">
+      <div className="container">
+        <div className="script__inner">
+          <div className="script_list">
+            <div className="container">
+              <ul>
+                {props.videos.map((video, index) => (
+                  <ScriptList key={index} video={video} />
+                ))}
+              </ul>
             </div>
+          </div>
         </div>
+      </div>
     </section>
-  )
+  );
 }
 
-export default ScriptCon
+export default ScriptCon;
